@@ -28,6 +28,8 @@ public class TestArrayList {
 		al.remove(" Two ");
 		System.out.println("Now :" + al);
 		al.set(1, "New");
+		System.out.println("Now :" + al);
+		
 		System.out.println("Contains four :" + al.contains("four"));
 		al.clear();
 		System.out.println("Now :" + al);
