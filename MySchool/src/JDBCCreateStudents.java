@@ -1,10 +1,10 @@
 //STEP 1. Import required packages
 import java.sql.*;
 
-public class JDBC_Create_Table {
+public class JDBCCreateStudents {
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://localhost/school";
+   static final String DB_URL = "jdbc:mysql://localhost/myschool";
 
    //  Database credentials
    static final String USER = "atika";
@@ -31,7 +31,9 @@ public class JDBC_Create_Table {
                    " name VARCHAR(255), " + 
                    " age INTEGER, " + 
                    " gender VARCHAR(255), " + 
-                   " PRIMARY KEY ( id ))"; 
+                   " PRIMARY KEY ( id )), " +
+                   " FOREIGN KEY ( name ) REFERENCES CLASS (name ))";
+     
 
       stmt.executeUpdate(sql);
       System.out.println("Created table in given database...");
@@ -54,7 +56,7 @@ public class JDBC_Create_Table {
       }catch(SQLException se){
          se.printStackTrace();
       }//end finally try
-   }//end try
+   }//end try A
    System.out.println("Goodbye!");
 }//end main
 }//end JDBCExample

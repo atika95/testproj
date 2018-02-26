@@ -1,18 +1,19 @@
 //STEP 1. Import required packages
-import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
-public class JDBC_Create_Table2 {
+public class JDBCCreateClass {
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://localhost/SCHOOL";
+   static final String DB_URL = "jdbc:mysql://localhost/school";
 
    //  Database credentials
    static final String USER = "atika";
    static final String PASS = "mypass!@#";
    
    public static void main(String[] args) {
-   Connection conn = null;
-   Statement stmt = null;
+   java.sql. Connection conn = null;
+   java.sql.Statement stmt = null;
    try{
       //STEP 2: Register JDBC driver
       Class.forName("com.mysql.jdbc.Driver");
@@ -28,7 +29,8 @@ public class JDBC_Create_Table2 {
       
       String sql = "CREATE TABLE CLASS " +
                    "(subject VARCHAR(255) , " +
-                   " Credit hours INTEGER)"; 
+                   " Credit_hours INTEGER not null, " +
+                   " PRIMARY KEY ( subject )) "; 
 
       stmt.executeUpdate(sql);
       System.out.println("Created table in given database...");
@@ -53,5 +55,6 @@ public class JDBC_Create_Table2 {
       }//end finally try
    }//end try
    System.out.println("Goodbye!");
+   //a
 }//end main
 }//end JDBCExample
