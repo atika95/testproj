@@ -19,12 +19,12 @@ public class JDBCCreateClass {
       Class.forName("com.mysql.jdbc.Driver");
 
       //STEP 3: Open a connection
-      System.out.println("Connecting to a selected database...");
+      System.out.println("Connecting to a selected database......");
       conn = DriverManager.getConnection(DB_URL, USER, PASS);
       System.out.println("Connected database successfully...");
       
       //STEP 4: Execute a query
-      System.out.println("Creating table in given database...");
+      System.out.println("Creating table in given database.....");
       stmt = conn.createStatement();
       
       String sql = "CREATE TABLE CLASS " +
@@ -33,7 +33,7 @@ public class JDBCCreateClass {
                    " PRIMARY KEY ( subject )) "; 
 
       stmt.executeUpdate(sql);
-      System.out.println("Created table in given database...");
+      System.out.println("Created table in given database.....");
    }catch(SQLException se){
       //Handle errors for JDBC
       se.printStackTrace();
@@ -55,6 +55,6 @@ public class JDBCCreateClass {
       }//end finally try
    }//end try
    System.out.println("Goodbye!");
-   //a
+   
 }//end main
 }//end JDBCExample

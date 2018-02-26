@@ -2,7 +2,7 @@ import java.util.*;
 import java.sql.*;
 
 /**
- * @author User
+ * @author atikah
  *
  */
 public class Management {

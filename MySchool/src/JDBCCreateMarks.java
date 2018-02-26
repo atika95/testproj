@@ -55,5 +55,6 @@ public class JDBCCreateMarks {
       }//end finally try
    }//end try
    System.out.println("Goodbye!");
+   //ABC
 }//end main
 }//end JDBCExample
